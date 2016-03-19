@@ -24,11 +24,11 @@ public class LockManager {
 
     public void wakeAndUnLock (Context context){
         pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
-        pw = pm.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP|PowerManager.SCREEN_BRIGHT_WAKE_LOCK,"open");
+        pw = pm.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP|PowerManager.SCREEN_BRIGHT_WAKE_LOCK,"yu");
         pw.acquire();
 
         km = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
-        kl = km.newKeyguardLock("lock");
+        kl = km.newKeyguardLock("yu");
 
         kl.disableKeyguard();
     }
